@@ -1,0 +1,8 @@
+C:\Users\ganie\source\repos\yankibtw\KFU-2nd\KFU-2nd\bin\Debug\KFU-2nd.exe.config
+C:\Users\ganie\source\repos\yankibtw\KFU-2nd\KFU-2nd\bin\Debug\KFU-2nd.exe
+C:\Users\ganie\source\repos\yankibtw\KFU-2nd\KFU-2nd\bin\Debug\KFU-2nd.pdb
+C:\Users\ganie\source\repos\yankibtw\KFU-2nd\KFU-2nd\obj\Debug\KFU-2nd.csproj.AssemblyReference.cache
+C:\Users\ganie\source\repos\yankibtw\KFU-2nd\KFU-2nd\obj\Debug\KFU-2nd.csproj.SuggestedBindingRedirects.cache
+C:\Users\ganie\source\repos\yankibtw\KFU-2nd\KFU-2nd\obj\Debug\KFU-2nd.csproj.CoreCompileInputs.cache
+C:\Users\ganie\source\repos\yankibtw\KFU-2nd\KFU-2nd\obj\Debug\KFU-2nd.exe
+C:\Users\ganie\source\repos\yankibtw\KFU-2nd\KFU-2nd\obj\Debug\KFU-2nd.pdb
