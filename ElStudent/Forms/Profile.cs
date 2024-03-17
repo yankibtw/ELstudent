@@ -46,7 +46,7 @@ namespace ElStudent.Forms
         {
             if (!isNewsDropped)
             {
-                someNewsPanel.Height += 400;
+                someNewsPanel.Height += 10;
                 if (someNewsPanel.Size == someNewsPanel.MaximumSize)
                 {
                     newsTimer.Stop();
@@ -57,7 +57,7 @@ namespace ElStudent.Forms
             }
             else
             {
-                someNewsPanel.Height -= 400;
+                someNewsPanel.Height -= 10;
                 if (someNewsPanel.Size == someNewsPanel.MinimumSize)
                 {
                     newsTimer.Stop();

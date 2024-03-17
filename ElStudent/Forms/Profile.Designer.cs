@@ -418,6 +418,7 @@
             // 
             // newsTimer
             // 
+            this.newsTimer.Interval = 1;
             this.newsTimer.Tick += new System.EventHandler(this.newsTimer_Tick);
             // 
             // helpPanel
