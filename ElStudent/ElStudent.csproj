@@ -58,11 +58,29 @@
     <Compile Include="elStudentForm.Designer.cs">
       <DependentUpon>elStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPasswordForm.Designer.cs">
+      <DependentUpon>EditPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditPersonInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPersonInfoForm.Designer.cs">
+      <DependentUpon>EditPersonInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonalInfoEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonalInfoEditForm.Designer.cs">
+      <DependentUpon>PersonalInfoEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Profile.cs">
       <SubType>Form</SubType>
@@ -75,27 +93,36 @@
     <EmbeddedResource Include="elStudentForm.resx">
       <DependentUpon>elStudentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPasswordForm.resx">
+      <DependentUpon>EditPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPersonInfoForm.resx">
+      <DependentUpon>EditPersonInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonalInfoEditForm.resx">
+      <DependentUpon>PersonalInfoEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -107,10 +134,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Vector.png" />
+    <None Include="Resources\menu.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diaryIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messageIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

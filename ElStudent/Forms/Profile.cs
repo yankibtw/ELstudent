@@ -9,8 +9,9 @@ namespace ElStudent.Forms
     public partial class Profile : Form
     {
         FontFamily fontFamily;
+        private MainForm parentForm;
         private bool isNewsDropped = false; 
-        public Profile()
+        public Profile(MainForm parentForm)
         {
             InitializeComponent();
             string fontPath = Path.Combine(Directory.GetParent(Application.StartupPath)?.Parent?.FullName, "Resources", "Montserrat-VariableFont_wght.ttf");
@@ -18,6 +19,7 @@ namespace ElStudent.Forms
             PrivateFontCollection privateFonts = new PrivateFontCollection();
             privateFonts.AddFontFile(fontPath);
             fontFamily = privateFonts.Families[0];
+            this.parentForm = parentForm;
         }
         private void Profile_Load(object sender, EventArgs e)
         {
@@ -71,6 +73,13 @@ namespace ElStudent.Forms
         private void readNewsBtn_Click(object sender, EventArgs e)
         {
             newsTimer.Start();
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            EditPersonInfoForm editPersonInfoForm = new EditPersonInfoForm(parentForm);
+            Close();
+            parentForm.OpenChildForm(editPersonInfoForm);
         }
 
         //Еще надо будет добавить автоматическое изменение размера newsPanel когда уже будут подгружаться новости из БД.

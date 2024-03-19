@@ -13,3 +13,6 @@ C:\Users\ganie\source\repos\yankibtw\ElStudent\ElStudent\obj\Debug\ElStudent.csp
 C:\Users\ganie\source\repos\yankibtw\ElStudent\ElStudent\bin\Debug\Guna.UI2.dll
 C:\Users\ganie\source\repos\yankibtw\ElStudent\ElStudent\obj\Debug\ElStudent.Forms.MainForm.resources
 C:\Users\ganie\source\repos\yankibtw\ElStudent\ElStudent\obj\Debug\ElStudent.Forms.Profile.resources
+C:\Users\ganie\source\repos\yankibtw\ElStudent\ElStudent\obj\Debug\ElStudent.Forms.EditPersonInfoForm.resources
+C:\Users\ganie\source\repos\yankibtw\ElStudent\ElStudent\obj\Debug\ElStudent.Forms.PersonalInfoEditForm.resources
+C:\Users\ganie\source\repos\yankibtw\ElStudent\ElStudent\obj\Debug\ElStudent.Forms.EditPasswordForm.resources

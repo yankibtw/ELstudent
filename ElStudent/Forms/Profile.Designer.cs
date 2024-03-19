@@ -53,15 +53,15 @@
             this.notesLabel = new System.Windows.Forms.Label();
             this.newsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.someNewsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.helpPanel = new System.Windows.Forms.Panel();
+            this.newsDateLabel = new System.Windows.Forms.Label();
+            this.readNewsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.newsMainTextLabel = new System.Windows.Forms.Label();
             this.newsDescritionLabel = new System.Windows.Forms.Label();
             this.newsHeadingLabel = new System.Windows.Forms.Label();
             this.lineUnderNews = new System.Windows.Forms.Panel();
             this.newsLabel = new System.Windows.Forms.Label();
-            this.newsDateLabel = new System.Windows.Forms.Label();
-            this.readNewsBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.newsMainTextLabel = new System.Windows.Forms.Label();
             this.newsTimer = new System.Windows.Forms.Timer(this.components);
-            this.helpPanel = new System.Windows.Forms.Panel();
             this.fullNamePanel.SuspendLayout();
             this.allInfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainPickture)).BeginInit();
@@ -117,6 +117,7 @@
             this.editBtn.Size = new System.Drawing.Size(200, 50);
             this.editBtn.TabIndex = 10;
             this.editBtn.Text = "Редактировать";
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // emailTagLabel
             // 
@@ -339,41 +340,15 @@
             this.someNewsPanel.Size = new System.Drawing.Size(1000, 174);
             this.someNewsPanel.TabIndex = 3;
             // 
-            // newsDescritionLabel
+            // helpPanel
             // 
-            this.newsDescritionLabel.AutoSize = true;
-            this.newsDescritionLabel.Location = new System.Drawing.Point(33, 56);
-            this.newsDescritionLabel.Name = "newsDescritionLabel";
-            this.newsDescritionLabel.Size = new System.Drawing.Size(234, 26);
-            this.newsDescritionLabel.TabIndex = 1;
-            this.newsDescritionLabel.Text = "Очень кратенькое описание данной новости\r\n\r\n";
-            // 
-            // newsHeadingLabel
-            // 
-            this.newsHeadingLabel.AutoSize = true;
-            this.newsHeadingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(103)))), ((int)(((byte)(165)))));
-            this.newsHeadingLabel.Location = new System.Drawing.Point(33, 18);
-            this.newsHeadingLabel.Name = "newsHeadingLabel";
-            this.newsHeadingLabel.Size = new System.Drawing.Size(103, 13);
-            this.newsHeadingLabel.TabIndex = 0;
-            this.newsHeadingLabel.Text = "Какое-то название";
-            // 
-            // lineUnderNews
-            // 
-            this.lineUnderNews.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(87)))), ((int)(((byte)(114)))));
-            this.lineUnderNews.Location = new System.Drawing.Point(25, 70);
-            this.lineUnderNews.Name = "lineUnderNews";
-            this.lineUnderNews.Size = new System.Drawing.Size(1001, 1);
-            this.lineUnderNews.TabIndex = 2;
-            // 
-            // newsLabel
-            // 
-            this.newsLabel.AutoSize = true;
-            this.newsLabel.Location = new System.Drawing.Point(470, 18);
-            this.newsLabel.Name = "newsLabel";
-            this.newsLabel.Size = new System.Drawing.Size(50, 13);
-            this.newsLabel.TabIndex = 0;
-            this.newsLabel.Text = "Новости";
+            this.helpPanel.Controls.Add(this.newsDateLabel);
+            this.helpPanel.Controls.Add(this.readNewsBtn);
+            this.helpPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.helpPanel.Location = new System.Drawing.Point(0, 109);
+            this.helpPanel.Name = "helpPanel";
+            this.helpPanel.Size = new System.Drawing.Size(1000, 65);
+            this.helpPanel.TabIndex = 5;
             // 
             // newsDateLabel
             // 
@@ -416,20 +391,46 @@
             this.newsMainTextLabel.Text = resources.GetString("newsMainTextLabel.Text");
             this.newsMainTextLabel.Visible = false;
             // 
+            // newsDescritionLabel
+            // 
+            this.newsDescritionLabel.AutoSize = true;
+            this.newsDescritionLabel.Location = new System.Drawing.Point(33, 56);
+            this.newsDescritionLabel.Name = "newsDescritionLabel";
+            this.newsDescritionLabel.Size = new System.Drawing.Size(234, 26);
+            this.newsDescritionLabel.TabIndex = 1;
+            this.newsDescritionLabel.Text = "Очень кратенькое описание данной новости\r\n\r\n";
+            // 
+            // newsHeadingLabel
+            // 
+            this.newsHeadingLabel.AutoSize = true;
+            this.newsHeadingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(103)))), ((int)(((byte)(165)))));
+            this.newsHeadingLabel.Location = new System.Drawing.Point(33, 18);
+            this.newsHeadingLabel.Name = "newsHeadingLabel";
+            this.newsHeadingLabel.Size = new System.Drawing.Size(103, 13);
+            this.newsHeadingLabel.TabIndex = 0;
+            this.newsHeadingLabel.Text = "Какое-то название";
+            // 
+            // lineUnderNews
+            // 
+            this.lineUnderNews.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(87)))), ((int)(((byte)(114)))));
+            this.lineUnderNews.Location = new System.Drawing.Point(25, 70);
+            this.lineUnderNews.Name = "lineUnderNews";
+            this.lineUnderNews.Size = new System.Drawing.Size(1001, 1);
+            this.lineUnderNews.TabIndex = 2;
+            // 
+            // newsLabel
+            // 
+            this.newsLabel.AutoSize = true;
+            this.newsLabel.Location = new System.Drawing.Point(470, 18);
+            this.newsLabel.Name = "newsLabel";
+            this.newsLabel.Size = new System.Drawing.Size(50, 13);
+            this.newsLabel.TabIndex = 0;
+            this.newsLabel.Text = "Новости";
+            // 
             // newsTimer
             // 
             this.newsTimer.Interval = 1;
             this.newsTimer.Tick += new System.EventHandler(this.newsTimer_Tick);
-            // 
-            // helpPanel
-            // 
-            this.helpPanel.Controls.Add(this.newsDateLabel);
-            this.helpPanel.Controls.Add(this.readNewsBtn);
-            this.helpPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.helpPanel.Location = new System.Drawing.Point(0, 109);
-            this.helpPanel.Name = "helpPanel";
-            this.helpPanel.Size = new System.Drawing.Size(1000, 65);
-            this.helpPanel.TabIndex = 5;
             // 
             // Profile
             // 

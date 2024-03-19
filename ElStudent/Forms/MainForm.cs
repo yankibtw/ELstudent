@@ -11,6 +11,7 @@ namespace ElStudent.Forms
         private elStudentForm elStudentForm;
         FontFamily fontFamily;
         private Form currentChildForm;
+        private bool isMenuOpened = false;
         public MainForm(elStudentForm elStudentForm)
         {
             InitializeComponent();
@@ -27,13 +28,18 @@ namespace ElStudent.Forms
         {
             menuLabel.Font = new Font(fontFamily, 18);
             usernameHeaderLabel.Font = new Font(fontFamily, 18);
-            OpenChildForm(new Forms.Profile());
+            personalKabinetBtn.Font = new Font(fontFamily, 14);
+            diaryBtn.Font = new Font(fontFamily, 14);
+            notesBtn.Font = new Font(fontFamily, 14);
+            messageBtn.Font = new Font(fontFamily, 14);
+            exitBtn.Font = new Font(fontFamily, 14);
+            OpenChildForm(new Profile(this));
         }
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-        private void OpenChildForm(Form childForm)
+        public void OpenChildForm(Form childForm)
         {
             currentChildForm = childForm;
             childForm.TopLevel = false;
@@ -42,6 +48,30 @@ namespace ElStudent.Forms
             mainPanel.Controls.Add(childForm);
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void mainMenuBtn_Click(object sender, EventArgs e)
+        {
+            if (!isMenuOpened)
+            {
+                mainMenuBtn.Image = Properties.Resources.closeIcon;
+                menuLabel.Text = "Закрыть";
+                menuPanel.Visible = true;
+                isMenuOpened = true;
+            }
+            else
+            {
+                mainMenuBtn.Image = Properties.Resources.menu;
+                menuLabel.Text = "Меню";
+                menuPanel.Visible = false;
+                isMenuOpened = false;
+                
+            }
+        }
+
+        private void personalKabinetBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Profile(this));
         }
     }
 }

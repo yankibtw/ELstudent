@@ -37,7 +37,6 @@ namespace ElStudent
             // Если пользователь успешно аутентифицирован, переходим на основную страницу
             MainForm mainForm = new MainForm(this);
             mainForm.Show();
-
             Hide();
         }
 
