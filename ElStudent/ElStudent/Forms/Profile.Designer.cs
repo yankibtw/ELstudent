@@ -87,9 +87,9 @@
             this.allInfoPanel.Controls.Add(this.groupLabel);
             this.allInfoPanel.Controls.Add(this.loginLabel);
             this.allInfoPanel.Controls.Add(this.idLabel);
-            this.allInfoPanel.Location = new System.Drawing.Point(61, 525);
+            this.allInfoPanel.Location = new System.Drawing.Point(62, 546);
             this.allInfoPanel.Name = "allInfoPanel";
-            this.allInfoPanel.Padding = new System.Windows.Forms.Padding(64, 60, 64, 0);
+            this.allInfoPanel.Padding = new System.Windows.Forms.Padding(64, 0, 64, 0);
             this.allInfoPanel.Size = new System.Drawing.Size(569, 411);
             this.allInfoPanel.TabIndex = 3;
             // 
@@ -103,7 +103,7 @@
             this.editBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(87)))), ((int)(((byte)(114)))));
             this.editBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.editBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.editBtn.Location = new System.Drawing.Point(119, 304);
+            this.editBtn.Location = new System.Drawing.Point(165, 304);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(200, 50);
             this.editBtn.TabIndex = 10;
@@ -113,7 +113,7 @@
             // emailTagLabel
             // 
             this.emailTagLabel.AutoSize = true;
-            this.emailTagLabel.Location = new System.Drawing.Point(237, 227);
+            this.emailTagLabel.Location = new System.Drawing.Point(238, 227);
             this.emailTagLabel.Name = "emailTagLabel";
             this.emailTagLabel.Size = new System.Drawing.Size(82, 13);
             this.emailTagLabel.TabIndex = 9;
@@ -122,7 +122,7 @@
             // groupTagLabel
             // 
             this.groupTagLabel.AutoSize = true;
-            this.groupTagLabel.Location = new System.Drawing.Point(237, 169);
+            this.groupTagLabel.Location = new System.Drawing.Point(238, 169);
             this.groupTagLabel.Name = "groupTagLabel";
             this.groupTagLabel.Size = new System.Drawing.Size(40, 13);
             this.groupTagLabel.TabIndex = 8;
@@ -131,7 +131,7 @@
             // loginTagLabel
             // 
             this.loginTagLabel.AutoSize = true;
-            this.loginTagLabel.Location = new System.Drawing.Point(237, 111);
+            this.loginTagLabel.Location = new System.Drawing.Point(238, 111);
             this.loginTagLabel.Name = "loginTagLabel";
             this.loginTagLabel.Size = new System.Drawing.Size(51, 13);
             this.loginTagLabel.TabIndex = 7;
@@ -140,7 +140,7 @@
             // idTagLabel
             // 
             this.idTagLabel.AutoSize = true;
-            this.idTagLabel.Location = new System.Drawing.Point(237, 53);
+            this.idTagLabel.Location = new System.Drawing.Point(238, 53);
             this.idTagLabel.Name = "idTagLabel";
             this.idTagLabel.Size = new System.Drawing.Size(37, 13);
             this.idTagLabel.TabIndex = 6;
@@ -187,12 +187,14 @@
             this.userFullNameLabel.AutoSize = true;
             this.userFullNameLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.userFullNameLabel.Location = new System.Drawing.Point(61, 450);
-            this.userFullNameLabel.MaximumSize = new System.Drawing.Size(470, 0);
+            this.userFullNameLabel.MaximumSize = new System.Drawing.Size(500, 0);
+            this.userFullNameLabel.MinimumSize = new System.Drawing.Size(500, 0);
             this.userFullNameLabel.Name = "userFullNameLabel";
-            this.userFullNameLabel.Padding = new System.Windows.Forms.Padding(0, 62, 0, 0);
-            this.userFullNameLabel.Size = new System.Drawing.Size(131, 75);
+            this.userFullNameLabel.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.userFullNameLabel.Size = new System.Drawing.Size(500, 43);
             this.userFullNameLabel.TabIndex = 1;
             this.userFullNameLabel.Text = "Фамилия Имя Отчество";
+            this.userFullNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mainPickture
             // 
@@ -371,7 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1904, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.mainNewsPanel);
             this.Controls.Add(this.notesPanel);
             this.Controls.Add(this.diaryPanel);

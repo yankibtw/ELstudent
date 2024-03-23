@@ -14,6 +14,7 @@ namespace ElStudent.Forms
     {
         FontFamily fontFamily;
         private MainForm parentForm;
+        private int newsQty; 
         public Profile(MainForm parentForm)
         {
             InitializeComponent();
@@ -24,10 +25,10 @@ namespace ElStudent.Forms
             fontFamily = privateFonts.Families[0];
             this.parentForm = parentForm;
         }
-        static private SelectNews allNews = new SelectNews();
-        private List<News> selectedNews = allNews.SelectAllNews();
         private void Profile_Load(object sender, EventArgs e)
         {
+            SelectNews allNews = new SelectNews();
+            List<News> selectedNews = allNews.SelectAllNews();
             SessionManager manager = new SessionManager();      
 
             userFullNameLabel.Text = $"{manager.GetSessionData("lastname")} {manager.GetSessionData("firstname")} {manager.GetSessionData("patronumic")}";
@@ -36,6 +37,7 @@ namespace ElStudent.Forms
             emailTagLabel.Text = $"{manager.GetSessionData("email")}";
             groupTagLabel.Text = $"{manager.GetSessionData("group_number")}";
 
+            allInfoPanel.Location = new Point(31, 536 + userFullNameLabel.Size.Height);
             userFullNameLabel.Font = new Font(fontFamily, 26);
             idLabel.Font = new Font(fontFamily, 20);
             loginLabel.Font = new Font(fontFamily, 20);
@@ -52,6 +54,7 @@ namespace ElStudent.Forms
             notesBtn.Font = new Font(fontFamily, 14);
             newsHeaderLabel.Font = new Font(fontFamily, 20);
 
+            newsQty = selectedNews.Count;
             foreach (var news in selectedNews)
             {
                 AddNewsToForm(news);
@@ -147,7 +150,8 @@ namespace ElStudent.Forms
             someNewsPanel.Controls.Add(bottomPanel);
 
             someNewsFlow.Controls.Add(someNewsPanel);
-            someNewsFlow.MinimumSize = new Size(1100, selectedNews.Count * someNewsPanel.MaximumSize.Height + 190);
+            someNewsFlow.AutoSize = true;
+            someNewsFlow.MinimumSize = new Size(1100, newsQty * someNewsPanel.MaximumSize.Height + 190);
 
             Timer newsTimer = new Timer();
             newsTimer.Interval = 1;
