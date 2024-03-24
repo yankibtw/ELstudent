@@ -177,6 +177,7 @@
     <Compile Include="DB\auth.cs" />
     <Compile Include="DB\DBConnect.cs" />
     <Compile Include="DB\SelectNews.cs" />
+    <Compile Include="DB\SelectNotes.cs" />
     <Compile Include="DB\SessionManager.cs" />
     <Compile Include="elStudentForm.cs">
       <SubType>Form</SubType>

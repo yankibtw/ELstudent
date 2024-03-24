@@ -1,37 +1,45 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ElStudent.DB
 {
-    internal class SelectNews
+    internal class SelectNotes
     {
         private DBConnect connect = new DBConnect("localhost", "root", "root", "elstudent");
-        public List<News> allNews = new List<News>();
+        public List<Note> allStudentNote = new List<Note>();
 
-        public List<News> SelectAllNews()
+        public List<Note> SelectAllStudentNotes()
         {
             MySqlConnection connection = connect.GetConnection();
-            string query = "SELECT * FROM news";
+            string query = "SELECT * FROM student_notes";
 
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 try
                 {
                     connection.Open();
-                    
+
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            string newsTitle = reader.GetString("title").Trim();
-                            string description = reader.GetString("description").Trim();
-                            string news_text = reader.GetString("news_text").Trim();
-                            DateTime news_date = reader.GetDateTime("news_date");
-                            allNews.Add(new News(newsTitle, description, news_text, news_date));
+                            int id = reader.GetInt32("id");
+                            int studentId = reader.GetInt32("student_id"); 
+                            string noteTitle = reader.GetString("note_title").Trim();
+                            string noteText = reader.GetString("note_text").Trim();
+                            DateTime noteDate = reader.GetDateTime("note_date");
+                            SessionManager sessionManager = new SessionManager();
+                            if (studentId.ToString() == sessionManager.GetSessionData("id").Trim())
+                            {
+                                allStudentNote.Add(new Note(id, noteTitle, noteText, noteDate));
+                            }
                         }
-    
+
                     }
                 }
                 catch (MySqlException ex)
@@ -40,24 +48,24 @@ namespace ElStudent.DB
                 }
                 finally { connection.Close(); }
             }
-            return allNews;
+            return allStudentNote;
         }
     }
 
-    public class News
+    public class Note
     {
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
-        public string Description { get; set; }
         public DateTime Date { get; set; }
 
-        public News(string title, string desctription, string text, DateTime date)
+        public Note(int id, string title, string text, DateTime date)
         {
+            Id = id;
             Title = title;
-            Description = desctription;
             Text = text;
             Date = date;
         }
     }
-
 }
+
