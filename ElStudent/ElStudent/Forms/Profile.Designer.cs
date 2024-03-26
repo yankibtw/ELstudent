@@ -237,6 +237,7 @@
             this.diaryBtn.Size = new System.Drawing.Size(196, 45);
             this.diaryBtn.TabIndex = 3;
             this.diaryBtn.Text = "Перейти";
+            this.diaryBtn.Click += new System.EventHandler(this.diaryBtn_Click);
             // 
             // lineUnderDiary
             // 

@@ -83,6 +83,16 @@ namespace ElStudent.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diaryNavigationArrow {
+            get {
+                object obj = ResourceManager.GetObject("diaryNavigationArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exitIcon {
             get {
                 object obj = ResourceManager.GetObject("exitIcon", resourceCulture);
@@ -127,6 +137,26 @@ namespace ElStudent.Properties {
             get {
                 object obj = ResourceManager.GetObject("Montserrat", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap navigationArrow {
+            get {
+                object obj = ResourceManager.GetObject("navigationArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap navigationArrow1 {
+            get {
+                object obj = ResourceManager.GetObject("navigationArrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

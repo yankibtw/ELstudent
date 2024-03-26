@@ -189,5 +189,12 @@ namespace ElStudent.Forms
             }
             readBtn.Click += new EventHandler(readBtn_Click);
         }
+
+        private void diaryBtn_Click(object sender, EventArgs e)
+        {
+            ScheduleForm diaryForm = new ScheduleForm(this);
+            Close();
+            parentForm.OpenChildForm(diaryForm);
+        }
     }
 }

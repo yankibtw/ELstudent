@@ -37,7 +37,7 @@ namespace ElStudent
         private void readyBtn_Click(object sender, EventArgs e)
         {
             auth auth = new auth();
-            bool isAuth = auth.AuthentiticateUser(loginTextBox.Text, passwordTextBox.Text);
+            bool isAuth = auth.AuthenticateUser(loginTextBox.Text, passwordTextBox.Text);
             
             // Если пользователь успешно аутентифицирован, переходим на основную страницу
             if (isAuth)
